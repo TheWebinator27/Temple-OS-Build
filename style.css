@@ -145,7 +145,7 @@ button:hover{
 }
 
 .games-grid img{
-    width: 100%;
+    width: 80px;
 }
 
 .game-grid-item p{
@@ -156,6 +156,9 @@ button:hover{
 
 .game-grid-item{
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 /* Long temple OS sectioin - main section*/
@@ -296,8 +299,25 @@ button:hover{
 /*Elephant app*/
 
 .hydration-meter{
-    background-color:#0000AA;
 
     height: 20px;
-    width: 100px;e
+    width: 100%;
+    border: 1px dashed #000;
+    z-index: 10;
 }
+.hydration-level{
+    width: 62%;
+    background-color: #0000AA;
+    display: block;
+    height: 100%;
+}
+
+
+/*Varoom image*/
+
+.varoom img{
+    transition: transform 0.1s linear;
+    transform-style: preserve-3d;
+    display: block;
+    margin: 0 auto;
+  }
