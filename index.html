@@ -54,40 +54,90 @@
                     every time you boot.</p>
                 <p>Cd("::/Adam"):Dir:L</p>
 
-                <!--games-->
+                <!--Fun games-->
                 <h2 style="color: #A800A7; text-align: center; font-size: 14px; margin-top: 40px;">Fun Games</h2>
                 <div class="games-grid">
-                    <div class="game-grid-item"><img src="images/Temple-os-sword-scale.jpg" alt="Titanium"> 
+
+                    <div class="game-grid-item"><img src="images/games/Titanium.png" alt="Titanium"> 
                         <p>Titanium</p>
                     </div>
 
-                    <div class="game-grid-item"><img src="images/Temple-os-sword-scale.jpg" alt="Titanium"> 
-                        <p>Bat Game</p>
+                    <div class="game-grid-item"><img src="images/games/Black Diamond.png" alt="Black Diamond"> 
+                        <p>Black Diamond</p>
                     </div>
 
-                    <div class="game-grid-item"><img src="images/Temple-os-sword-scale.jpg" alt="Titanium"> 
-                        <p>Game 03</p>
+                    <div class="game-grid-item"><img src="images/games/Flap Bat.png" alt="Flat Bat"> 
+                        <p>Flat Bat</p>
                     </div>
 
-                    <div class="game-grid-item"><img src="images/Temple-os-sword-scale.jpg" alt="Titanium"> 
-                        <p>Game 04</p>
+                    <div class="game-grid-item varoom"><img src="images/games/Varoom.png" alt="Varoom"> 
+                        <p>Varoom</p>
                     </div>
 
-                    <div class="game-grid-item"><img src="images/Temple-os-sword-scale.jpg" alt="Titanium"> 
-                        <p>Game 05</p>
+                    <script>
+                        let rotateX = 0;
+                        let rotateY = 0;
+                      
+                        const img = document.querySelector('.varoom img'); // only the image!
+                      
+                        function spinVaroom() {
+                          rotateX += 1; // vertical axis
+                          rotateY += 0.8; // horizontal axis
+                          img.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                          requestAnimationFrame(spinVaroom);
+                        }
+                      
+                        spinVaroom();
+                      </script>
+
+                    <div class="game-grid-item"><img src="images/games/FlatTops.png" alt="FlatTops"> 
+                        <p>FlatTops</p>
                     </div>
 
-                    <div class="game-grid-item"><img src="images/Temple-os-sword-scale.jpg" alt="Titanium"> 
-                        <p>Game 06</p>
+                    <div class="game-grid-item"><img src="images/games/Bomber Golf.png" alt="Bomber Golf">
+                        <p>Bomber Golf</p>
                     </div>
 
-                    <div class="game-grid-item"><img src="images/Temple-os-sword-scale.jpg" alt="Titanium"> 
-                        <p>Game 07</p>
+                    <div class="game-grid-item"><img src="images/games/KeepAway.png" alt="KeepAway"> 
+                        <p>KeepAway</p>
                     </div>
 
-                    <div class="game-grid-item"><img src="images/Temple-os-sword-scale.jpg" alt="Titanium"> 
-                        <p>Game 08</p>
+                    <div class="game-grid-item"><img src="images/games/YEEEEHAAWWW.png" alt="YEEEEHAWWW"> 
+                        <p>YEEEEHAWWW</p>
                     </div>
+
+                    <div class="game-grid-item"><img src="images/games/X-Caliber.png" alt="X-Caliber"> 
+                        <p>X-Caliber</p>
+                    </div>
+
+                    <div class="game-grid-item"><img src="images/games/Wenchelas.png" alt="Flat Bat"> 
+                        <p>Wenceslas</p>
+                    </div>
+
+                    <div class="game-grid-item"><img src="images/games/Battle Lines.png" alt="Flat Bat"> 
+                        <p>Battle Lines</p>
+                    </div>
+
+
+                </div>
+
+
+                <!--UnFun games-->
+                <h2 style="color: #A800A7; text-align: center; font-size: 14px; margin-top: 40px;">Unfun Games</h2>
+                <div class="games-grid">
+
+                    <div class="game-grid-item"><img src="images/games/Talons.png" alt="Talons"> 
+                        <p>Talons</p>
+                    </div>
+
+                    <div class="game-grid-item"><img src="images/games/Castle Frankenstein.png" alt="Castle Frankenstein"> 
+                        <p>Castle Frankenstein</p>
+                    </div>
+
+                    <div class="game-grid-item"><img src="images/games/Span.png" alt="The Bridge"> 
+                        <p>The Bridge</p>
+                    </div>
+
 
                 </div>
             </div>
@@ -116,7 +166,7 @@
 
                     
                     <div class="god-word-box">
-                    <button id="god-word-button">New word</button>
+                    <button id="god-word-button">Generate God Word</button>
                     </div>
                 </div>
             </div>
@@ -126,8 +176,8 @@
                 <h2>God Likes Elephants</h2>
                 <img src="images/God-likes elephants (1).png" alt="16Bit Elephant drawing">
 
-                <span>Hydration 0meter</span>
-                <span class="hydration meter" style="background-color: #0000A8; width: 100%; height: 20px;"></span>
+                <span>Hydration 0meter 62%</span>
+                <div class="hydration-meter"><span class="hydration-level"></span></div>
             </div>
 
 
