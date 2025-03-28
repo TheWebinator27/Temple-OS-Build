@@ -1,0 +1,303 @@
+*, *::after, *::before {
+    margin: 0;
+}
+
+@font-face{
+    font-family: TempleOS;
+    src: url(fonts/templeos_font.otf);
+}
+
+.adam{
+    position: fixed;
+    width: 1301px;
+
+    background-color: #0000AA;
+    height: 25px;
+
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.adam span{
+    margin-left: 10px;
+}
+
+.h1-section{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+
+    padding-top: 55px;
+    padding-bottom: 25px;
+}
+
+.load-menu{
+    padding: 2px;
+}
+
+.load-menu:hover{
+    cursor: pointer;
+}
+
+.load-menu.blink{
+    background-color: #fff;
+    color: #0000AA;
+}
+
+#fps-counter{
+    margin-left: 0px;
+    display: inline-block;
+    width: 38px;
+}
+
+h1{
+    text-align: center;
+    padding: 20px 0px;
+    font-size: 48px;
+    color: #FFFF55;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000; 
+}
+
+h2{
+    font-size: 16px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+    background-color: #000;
+    color: #0000AA;
+    font-family: TempleOS, sans-serif;
+    font-size: 11px;
+
+    line-height: 1.05rem;
+}
+
+button{
+    padding: 5px 20px;
+    background-color: aqua;
+    border: 2px solid #0000AA;
+    color: #0000AA;
+    font-family: TempleOS, sans-serif;
+    font-size: 12px;
+}
+
+button:hover{
+    background-color: #0000AA;
+    color: aqua;
+    cursor: pointer;
+}
+
+.window{
+    width: 1301px;
+    background-color: #E5E5E5;
+    position: relative;
+    overflow: hidden;
+}
+
+/*Color styles*/
+
+.red-text{
+    color: #A80000;
+    text-decoration: underline;
+}
+
+.green-text{
+    color: #52C352;
+}
+
+/*main grid section*/
+
+.main-grid-section{
+    margin: 20px 20px 0px 20px;
+
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+}
+
+.grid-box{
+    border: 2px solid #0000AA;
+    outline: 2px solid #0000AA;
+    outline-offset: -6px;
+    
+    padding: 20px;
+}
+
+.games-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+
+    margin-top: 10px;
+
+    /* gap: 10px; */
+    row-gap: 10px;
+    column-gap: 5px;
+}
+
+.games-grid img{
+    width: 100%;
+}
+
+.game-grid-item p{
+    text-align: center;
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+.game-grid-item{
+    cursor: pointer;
+}
+
+/* Long temple OS sectioin - main section*/
+
+.long-templeos-section{
+    
+    grid-row: span 3;
+}
+
+/*Binary -> human*/
+
+.binary-human textarea{
+    resize: vertical;
+}
+
+.binary-human .form-group{
+    margin-top: 20px;
+}
+
+#binary-input, #binary-result{
+    width: 100%;
+    border: 0px;
+    border-bottom: 1px solid black;
+    background-color: #E5E5E5;
+
+    margin: 10px 0px;
+}
+
+#binary-result{
+    width: 100%;
+}
+
+/*God word*/
+.god-word-blink{
+    margin-top: 10px;
+    display: inline-block
+}
+
+.god-word-blink.blink{
+    color: yellow;
+    background-color: #0000AA;
+}
+
+.god-word-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/*God likes elephants section*/
+
+.god-likes-elephants img{
+    width: 100%;
+    margin-top: 5px;
+}
+
+/*Temple OS popup*/
+
+#popup-button{
+    color: yellow;
+    margin-left: auto;
+}
+
+#popup-button:hover{
+    cursor: pointer;
+}
+
+#popup-overlay{
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(128, 128, 128, 0.4);
+    pointer-events: none;
+}
+
+#popup-overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    z-index: 10;
+
+    background-color: #fff;
+    padding: 6px;
+    border: 2px solid #0000AA; 
+    outline: 2px solid #0000AA;
+    outline-offset: -6px;
+    width: 400px;
+}
+
+.modal.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-body{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.modal-body img{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.popup-text{
+    width: 100%;
+    padding: 0 5px;
+}
+
+.popup-text p{
+    margin-top: 10px;
+}
+
+.modal-body button{
+    margin: 20px 0px 20px 0px;
+    font-size: 14px;
+}
+
+.close-button:hover{
+    cursor: pointer;
+}
+
+/*Elephant app*/
+
+.hydration-meter{
+    background-color:#0000AA;
+
+    height: 20px;
+    width: 100px;e
+}
